@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE project [
+]>
+
+<project name="TestNG Module" default="usage" basedir=".">  
+
+<!-- ========== Initialize Properties =================================== -->
+    <property environment="env"/>
+    <property name="test.home" value="${basedir}"/>
+	<property name="test.jars" value="${test.home}/lib"/>
+    <property name="test.dest" value="${test.home}/build"/>
+    <property name="test.src" value="${test.home}/src"/>
+	<property name="ng.result" value="test-output"/>
+	<exec executable="hostname" osfamily="unix" failifexecutionfails="false" outputproperty="env.COMPUTERNAME"/>
+	<property name="host.name" value="${env.COMPUTERNAME}"/>
+	
+	<target name="setClassPath" unless="test.classpath">
+		<path id="classpath_jars">
+			<fileset dir="${test.jars}" includes="*.jar"/>
+		</path>
+		<pathconvert pathsep=":" 
+			property="test.classpath" 
+			refid="classpath_jars"/>
+	</target>
+
+	<target name="init" depends="setClassPath">
+		<tstamp>
+			<format property="start.time" pattern="MM/dd/yyyy hh:mm aa" />
+		</tstamp>
+		<condition property="ANT" 
+			value="${env.ANT_HOME}/bin/ant.bat" 
+			else="${env.ANT_HOME}/bin/ant">
+				<os family="windows" />
+		</condition>
+		<taskdef name="testng" classpath="${test.classpath}"
+			classname="org.testng.TestNGAntTask" />
+	</target>
+
+	<!-- clean -->
+	<target name="clean">
+		<delete dir="${test.dest}"/>
+	</target>
+
+	<!-- compile -->
+	<target name="compile" depends="init, clean" > 
+		<delete includeemptydirs="true" quiet="true">
+			<fileset dir="${test.dest}" includes="**/*"/>
+		</delete>
+		<echo message="making directory..."/>
+		<mkdir dir="${test.dest}"/>
+		<echo message="classpath------: ${test.classpath}"/>
+		<echo message="compiling..."/>
+		<javac 
+			debug="true" 
+			destdir="${test.dest}" 
+			srcdir="${test.src}" 
+			target="1.8" 
+			classpath="${test.classpath}"
+			includeantruntime="false"
+		>
+		</javac>
+		<copy todir="${test.dest}">
+			<fileset dir="${test.src}/config" includes="log4j.properties"/>
+		</copy>
+	</target>
+
+	<!-- build -->
+	<target name="build" depends="init">
+	</target>
+
+	<!-- api-smoke -->
+	<target name="api-smoke" depends="compile">
+    	<propertyfile file="${test.src}/config/testbed.properties">
+    		<entry key="server" value="${host.name}"/>
+    		<entry key="suite" value="api"/>
+    	</propertyfile>
+		<testng classpath="${test.classpath}:${test.dest}" suitename="api-smoke" failureproperty="test.fail">	
+			<xmlfileset dir="${test.home}" includes="api-smoke-tests.xml"/>
+		</testng>
+	</target>
+
+	<!-- api-regression -->
+	<target name="api-regression" depends="compile">
+    	<propertyfile file="${test.src}/config/testbed.properties">
+    		<entry key="server" value="${host.name}"/>
+    		<entry key="suite" value="api"/>
+    	</propertyfile>
+		<testng classpath="${test.classpath}:${test.dest}" suitename="api-regression" failureproperty="test.fail">	
+			<xmlfileset dir="${test.home}" includes="api-regression-tests.xml"/>
+		</testng>
+	</target>
+
+	<!-- fe-smoke -->
+    <target name="fe-smoke" depends="compile">
+    	<propertyfile file="${test.src}/config/testbed.properties">
+    		<entry key="server" value="${host.name}"/>
+    		<entry key="suite" value="fe"/>
+    	</propertyfile>
+		<testng classpath="${test.classpath}:${test.dest}" suitename="fe-smoke" failureproperty="test.fail">	
+			<xmlfileset dir="${test.home}" includes="fe-smoke-tests.xml"/>
+		</testng>
+	</target>
+
+	<!-- fe-regression -->
+	<target name="fe-regression" depends="compile">
+    	<propertyfile file="${test.src}/config/testbed.properties">
+    		<entry key="server" value="${host.name}"/>
+    		<entry key="suite" value="fe"/>
+    	</propertyfile>
+		<testng classpath="${test.classpath}:${test.dest}" suitename="fe-regression" failureproperty="test.fail">	
+			<xmlfileset dir="${test.home}" includes="fe-regression-tests.xml"/>
+		</testng>
+	</target>
+
+	<!-- feeds-smoke -->
+    <target name="feeds-smoke" depends="compile">
+    	<propertyfile file="${test.src}/config/testbed.properties">
+    		<entry key="server" value="${host.name}"/>
+    		<entry key="suite" value="feeds"/>
+    	</propertyfile>
+		<testng classpath="${test.classpath}:${test.dest}" suitename="feeds-smoke" failureproperty="test.fail">	
+			<xmlfileset dir="${test.home}" includes="feeds-smoke-tests.xml"/>
+		</testng>
+	</target>
+	
+	<!-- feeds-regression -->
+    <target name="feeds-regression" depends="compile">
+    	<propertyfile file="${test.src}/config/testbed.properties">
+    		<entry key="server" value="${host.name}"/>
+    		<entry key="suite" value="feeds"/>
+    	</propertyfile>
+		<testng classpath="${test.classpath}:${test.dest}" suitename="feeds-regression" failureproperty="test.fail">	
+			<xmlfileset dir="${test.home}" includes="feeds-regression-tests.xml"/>
+		</testng>
+	</target>
+	
+	<!-- v1-smoke -->
+	<target name="v1-smoke" depends="compile">
+    	<propertyfile file="${test.src}/config/testbed.properties">
+    		<entry key="server" value="${host.name}"/>
+    		<entry key="suite" value="v1"/>
+    	</propertyfile>
+		<testng classpath="${test.classpath}:${test.dest}" suitename="v1-smoke" failureproperty="test.fail">	
+			<xmlfileset dir="${test.home}" includes="v1-smoke-tests.xml"/>
+		</testng>
+	</target>
+			
+	<!-- v1-regression -->
+	<target name="v1-regression" depends="compile">
+    	<propertyfile file="${test.src}/config/testbed.properties">
+    		<entry key="server" value="${host.name}"/>
+    		<entry key="suite" value="v1"/>
+    	</propertyfile>
+		<testng classpath="${test.classpath}:${test.dest}" suitename="v1-regression" failureproperty="test.fail">	
+			<xmlfileset dir="${test.home}" includes="v1-regression-tests.xml"/>
+		</testng>
+	</target>
+
+	<!-- v1-cs -->
+	<target name="v1-cs" depends="compile">
+    	<propertyfile file="${test.src}/config/testbed.properties">
+    		<entry key="server" value="${host.name}"/>
+    		<entry key="suite" value="v1"/>
+    	</propertyfile>
+		<testng classpath="${test.classpath}:${test.dest}" suitename="v1-cs" failureproperty="test.fail">	
+			<xmlfileset dir="${test.home}" includes="v1-cs-tests.xml"/>
+		</testng>
+	</target>
+
+	<!-- create-data -->
+	<target name="create-data" depends="compile">
+    	<propertyfile file="${test.src}/config/testbed.properties">
+    		<entry key="server" value="${host.name}"/>
+    		<entry key="suite" value="create-data"/>
+    	</propertyfile>
+		<testng classpath="${test.classpath}:${test.dest}" suitename="create-data" failureproperty="test.fail">	
+			<xmlfileset dir="${test.home}" includes="create-data.xml"/>
+		</testng>
+	</target>
+			
+		<target name="usage">
+		<echo>
+			ant [suite name] will execute the test suite
+		</echo>
+	</target>
+
+	<path id="test.c">
+		<fileset dir="${test.jars}" includes="*.jar"/>
+	</path>
+	
+	<!-- reports -->
+	<target name="reports">
+		<mkdir dir="${test.home}/XSLT_Reports/output"/>
+		<xslt in="${ng.result}/testng-results.xml" style="src/util/testng-results.xsl"
+			out="${test.home}/XSLT_Reports/output/index.html" classpathref="test.c" processor="SaxonLiaison">
+			<param name="testNgXslt.outputDir" expression="${test.home}/XSLT_Reports/output/"/>
+			<param name="testNgXslt.showRuntimeTotals" expression="true"/>
+		</xslt>
+		<fail if="test.fail" message="One or more tests have failed"/>
+	</target>
+
+</project>

@@ -1,0 +1,32 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ThreatQ v1 Smoke Tests">
+
+<listeners>
+	<listener class-name="core.TestListeners"></listener>
+</listeners>
+
+<test name="V1 - Verify Crowdstrike Related Indicators">
+    <classes>
+        <class name="tests.V1VerifyCrowdstrikeRelatedIndicators" ></class>  
+    </classes>
+</test>
+
+<test name="V1 - CrowdStrike Primary Indicators Active Status">
+    <classes>
+        <class name="tests.V1CrowdStrikePrimaryIndicatorsActiveStatus" ></class>  
+    </classes>
+</test>
+
+<test name="V1 - Verify Crowdstrike Labels">
+    <classes>
+        <class name="tests.V1VerifyCrowdstrikeLabels" ></class>  
+    </classes>
+</test>
+
+<test name="V1 - CrowdStrike Get Indicators">
+    <classes>
+        <class name="tests.V1CrowdStrikeGetIndicators" ></class>  
+    </classes>
+</test>
+
+</suite>

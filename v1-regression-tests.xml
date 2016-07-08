@@ -1,0 +1,164 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ThreatQ v1 Smoke Tests">
+
+<listeners>
+	<listener class-name="core.TestListeners"></listener>
+</listeners>
+
+<test name="V1 - Verify Host Indicator Attributes Filepath">
+    <classes>
+        <class name="tests.V1VerifyHostIndicatorAttributesFilepath" ></class>  
+    </classes>
+</test>
+
+<test name="V1 - Verify HostIndicator Attributes - SHA-1">
+    <classes>
+        <class name="tests.V1VerifyHostIndicatorAttributesSHA1" ></class>  
+    </classes>
+</test>
+
+<test name="V1 - Verify Host Indicator Attributes - SHA-256">
+    <classes>
+        <class name="tests.V1VerifyHostIndicatorAttributesSHA256" ></class>  
+    </classes>
+</test>
+
+<test name="V1 - Verify Host Indicator Attributes - SHA-384">
+    <classes>
+        <class name="tests.V1VerifyHostIndicatorAttributesSHA384" ></class>  
+    </classes>
+</test>
+
+<test name="V1 - Verify Host Indicator Attributes - SHA-512">
+    <classes>
+        <class name="tests.V1VerifyHostIndicatorAttributesSHA512" ></class>  
+    </classes>
+</test>
+
+<test name="V1 - Verify Host Indicator Attributes - Filename">
+    <classes>
+        <class name="tests.V1VerifyHostIndicatorAttributesFilename" ></class>  
+    </classes>
+</test>
+
+<test name="V1 - Verify Host Indicator Attributes - Mutex">
+    <classes>
+        <class name="tests.V1VerifyHostIndicatorAttributesMutex" ></class>  
+    </classes>
+</test>
+
+<test name="V1 - Verify Host Indicator Attributes - Fuzzy Hash">
+    <classes>
+        <class name="tests.V1VerifyHostIndicatorAttributesFuzzyHash" ></class>  
+    </classes>
+</test>
+
+<test name="V1 - Verify Host Indicator Attributes - Registry Key">
+    <classes>
+        <class name="tests.V1VerifyHostIndicatorAttributesRegistryKey" ></class>  
+    </classes>
+</test>
+
+<test name="V1 - Verify Host Indicator Attributes - MD5">
+    <classes>
+        <class name="tests.V1VerifyHostIndicatorAttributesMD5" ></class>  
+    </classes>
+</test>
+
+<test name="V1 - Verify Network Indicator Attributes - CIDR Block">
+    <classes>
+        <class name="tests.V1VerifyNetworkIndicatorAttributesCIDRBlock" ></class>  
+    </classes>
+</test>
+
+<test name="V1 - VerifyNetworkIndicatorAttributes - X-Mailer">
+    <classes>
+        <class name="tests.V1VerifyNetworkIndicatorAttributesXMailer" ></class>  
+    </classes>
+</test>
+
+<test name="V1 - Verify Network Indicator Attributes - Email Address">
+    <classes>
+        <class name="tests.V1VerifyNetworkIndicatorAttributesEmailAddress" ></class>  
+    </classes>
+</test>
+
+<test name="V1 - Verify Network Indicator Attributes - Email Attachment">
+    <classes>
+        <class name="tests.V1VerifyNetworkIndicatorAttributesEmailAttachment" ></class>  
+    </classes>
+</test>
+
+<test name="V1 - Verify Network Indicator Attributes - Email Subject">
+    <classes>
+        <class name="tests.V1VerifyNetworkIndicatorAttributesEmailSubject" ></class>  
+    </classes>
+</test>
+
+<test name="V1 - Verify Network Indicator Attributes - IP Address">
+    <classes>
+        <class name="tests.V1VerifyNetworkIndicatorAttributesIPAddress" ></class>  
+    </classes>
+</test>
+
+<test name="V1 - Verify Network Indicator Attributes - String">
+    <classes>
+        <class name="tests.V1VerifyNetworkIndicatorAttributesString" ></class>  
+    </classes>
+</test>
+
+<test name="V1 - Verify Network Indicator Attributes - URL">
+    <classes>
+        <class name="tests.V1VerifyNetworkIndicatorAttributesURL" ></class>  
+    </classes>
+</test>
+
+<test name="V1 - Verify Network Indicator Attributes - URLPath">
+    <classes>
+        <class name="tests.V1VerifyNetworkIndicatorAttributesURLPath" ></class>  
+    </classes>
+</test>
+
+<test name="V1 - Verify Network Indicator Attributes - User-Agent">
+    <classes>
+        <class name="tests.V1VerifyNetworkIndicatorAttributesUserAgent" ></class>  
+    </classes>
+</test>
+
+<test name="V1 - Verify Network Indicator Attributes - FQDN">
+    <classes>
+        <class name="tests.V1VerifyNetworkIndicatorAttributesFQDN" ></class>  
+    </classes>
+</test>
+
+<test name="V1 - Verify Crowdstrike Related Indicators">
+    <classes>
+        <class name="tests.V1VerifyCrowdstrikeRelatedIndicators" ></class>  
+    </classes>
+</test>
+
+<test name="V1 - CrowdStrike Primary Indicators Active Status">
+    <classes>
+        <class name="tests.V1CrowdStrikePrimaryIndicatorsActiveStatus" ></class>  
+    </classes>
+</test>
+
+<test name="V1 - Verify Crowdstrike Labels">
+    <classes>
+        <class name="tests.V1VerifyCrowdstrikeLabels" ></class>  
+    </classes>
+</test>
+
+<test name="V1 - Verify ArcSight Export BestBuy">
+    <classes>
+        <class name="tests.V1VerifyArcSightExportBestBuy" ></class>  
+    </classes>
+</test>
+
+<test name="V1 - CrowdStrike Get Indicators">
+    <classes>
+        <class name="tests.V1CrowdStrikeGetIndicators" ></class>  
+    </classes>
+</test>
+
+</suite>

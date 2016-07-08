@@ -1,0 +1,536 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ThreatQ v2 Feeds Regression Tests">
+
+<listeners>
+	<listener class-name="core.TestListeners"></listener>
+</listeners>
+
+<test name="Feeds - abuse.ch Feodo Bad IP Blocklist">
+    <classes>
+        <class name="tests.FeedsAbuseChFeodoBadIPBlocklist" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - abuse.ch Feodo Domain Blocklist">
+    <classes>
+        <class name="tests.FeedsAbuseChFeodoDomainBlocklist" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - abuse.ch Feodo IP Blocklist">
+    <classes>
+        <class name="tests.FeedsAbuseChFeodoIPBlocklist" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - abuse.ch Palevo Domain Blocklist">
+    <classes>
+        <class name="tests.FeedsAbuseChPalevoDomainBlocklist" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - abuse.ch Palevo IP Blocklist">
+    <classes>
+        <class name="tests.FeedsAbuseChPalevoIPBlocklist" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - abuse.ch SSLBL (Extended)">
+    <classes>
+        <class name="tests.FeedsAbuseChSSLBLExtended" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - abuse.ch SSLBL IP Blacklist">
+    <classes>
+        <class name="tests.FeedsAbuseChSslBlIpBlacklist" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - abuse.ch SSLBL SSL Blacklist">
+    <classes>
+        <class name="tests.FeedsAbuseChSslBlSslBlacklist" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - abuse.ch ZeuS Block Bad FQDNs">
+    <classes>
+        <class name="tests.FeedsAbuseChZeusBlockBadFqdns" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - abuse.ch ZeuS Block Bad IPs">
+    <classes>
+        <class name="tests.FeedsAbuseChZeusBlockBadIps" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - abuse.ch ZeuS Block FQDN">
+    <classes>
+        <class name="tests.FeedsAbuseChZeusBlockFqdn" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - abuse.ch ZeuS Block IPs">
+    <classes>
+        <class name="tests.FeedsAbuseChZeusBlockIps" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - Blocklist.de (All)">
+    <classes>
+        <class name="tests.FeedsBlocklistDeAll" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - Blocklist.de (Apache)">
+    <classes>
+        <class name="tests.FeedsBlocklistDeApache" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - Blocklist.de (Bots)">
+    <classes>
+        <class name="tests.FeedsBlocklistDeBots" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - Blocklist.de (Bruteforcelogin)">
+    <classes>
+        <class name="tests.FeedsBlocklistDeBruteforcelogin" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - Blocklist.de (Ftp)">
+    <classes>
+        <class name="tests.FeedsBlocklistDeFtp" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - Blocklist.de (Imap)">
+    <classes>
+        <class name="tests.FeedsBlocklistDeImap" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - Blocklist.de (Ircbot)">
+    <classes>
+        <class name="tests.FeedsBlocklistDeIrcbot" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - Blocklist.de (Mail)">
+    <classes>
+        <class name="tests.FeedsBlocklistDeMail" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - Blocklist.de (Sip)">
+    <classes>
+        <class name="tests.FeedsBlocklistDeSip" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - Blocklist.de (Ssh)">
+    <classes>
+        <class name="tests.FeedsBlocklistDeSsh" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - Blocklist.de (Strongips)">
+    <classes>
+        <class name="tests.FeedsBlocklistDeStrongips" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - CI Army List IPs">
+    <classes>
+        <class name="tests.FeedsCIArmyListIps" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - CrowdStrike - Get Indicators">
+    <classes>
+        <class name="tests.FeedsCrowdStrikeGetIndicators" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - Crowdstrike - Attributes">
+    <classes>
+        <class name="tests.FeedsCrowdStrikeAttributes" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - CrowdStrike - Primary Indicators Active Status">
+    <classes>
+        <class name="tests.FeedsCrowdStrikePrimaryIndicatorsActiveStatus" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - Crowdstrike - Related Indicators">
+    <classes>
+        <class name="tests.FeedsCrowdStrikeRelatedIndicators" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - Crowdstrike - Source">
+    <classes>
+        <class name="tests.FeedsCrowdStrikeSource" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - DeepSight IP Attack">
+    <classes>
+        <class name="tests.FeedsDeepSightIPAttack" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - DeepSight IP Bot">
+    <classes>
+        <class name="tests.FeedsDeepSightIPBot" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - DeepSight IP CnC">
+    <classes>
+        <class name="tests.FeedsDeepSightIPCnC" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - DeepSight IP Fraud">
+    <classes>
+        <class name="tests.FeedsDeepSightIPFraud" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - DeepSight IP Malware">
+    <classes>
+        <class name="tests.FeedsDeepSightIPMalware" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - DeepSight IP Phishing">
+    <classes>
+        <class name="tests.FeedsDeepSightIPPhishing" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - DeepSight IP Spam">
+    <classes>
+        <class name="tests.FeedsDeepSightIPSpam" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - DeepSight URL Attack">
+    <classes>
+        <class name="tests.FeedsDeepSightURLAttack" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - DeepSight URL CnC">
+    <classes>
+        <class name="tests.FeedsDeepSightURLCnC" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - DeepSight URL Fraud">
+    <classes>
+        <class name="tests.FeedsDeepSightURLFraud" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - DeepSight URL Malware">
+    <classes>
+        <class name="tests.FeedsDeepSightURLMalware" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - DeepSight URL Phishing">
+    <classes>
+        <class name="tests.FeedsDeepSightURLPhishing" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - DShield Blocklist">
+    <classes>
+        <class name="tests.FeedsDShieldBlocklist" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - DShield Suspicious Domains List">
+    <classes>
+        <class name="tests.FeedsDShieldSuspiciousDomainsList" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - Emerging Threats Block IP">
+    <classes>
+        <class name="tests.FeedsEmergingThreatsBlockIp" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - Emerging Threats Compromised IPs">
+    <classes>
+        <class name="tests.FeedsEmergingThreatsCompromisedIps" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - Emerging Threats IQRisk Rep List FQDNs">
+    <classes>
+        <class name="tests.FeedsEmergingThreatsIQRiskRepListFQDNs" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - Emerging Threats IQRisk Rep List IPs">
+    <classes>
+        <class name="tests.FeedsEmergingThreatsIQRiskRepListIPs" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - hpHosts FQDN">
+    <classes>
+        <class name="tests.FeedsHpHostsFqdn" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - iSight - Indicators">
+    <classes>
+        <class name="tests.FeedsiSightIndicators" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - iSight - Reports">
+    <classes>
+        <class name="tests.FeedsiSightReports" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - Malware Domain List">
+    <classes>
+        <class name="tests.FeedsMalwareDomainList" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - Malware Domain List (Delisted)">
+    <classes>
+        <class name="tests.FeedsMalwareDomainListDelisted" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - Malware Domain List (Hosts)">
+    <classes>
+        <class name="tests.FeedsMalwareDomainListHosts" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - Malware Domain List (Ip)">
+    <classes>
+        <class name="tests.FeedsMalwareDomainListIp" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - Malware Domain List (Zeus Only)">
+    <classes>
+        <class name="tests.FeedsMalwareDomainListZeusOnly" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - MultiProxy Anonymous Proxy List">
+    <classes>
+        <class name="tests.FeedsMultiProxyAnonymousProxyList" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - NoThink Malware DNS">
+    <classes>
+        <class name="tests.FeedsNoThinkMalwareDns" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - NoThink Malware HTTP">
+    <classes>
+        <class name="tests.FeedsNoThinkMalwareHttp" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - NoThink Malware IRC">
+    <classes>
+        <class name="tests.FeedsNoThinkMalwareIrc" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - NoThink SSH Blacklist">
+    <classes>
+        <class name="tests.FeedsNoThinkSshBlacklist" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - SANS ISC Top Source IPs">
+    <classes>
+        <class name="tests.FeedsSansIscTopSourceIps" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - PhishTank">
+    <classes>
+        <class name="tests.FeedsPhishTank" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - SecureWorks - CTU Domain Coal Blacklist">
+    <classes>
+        <class name="tests.FeedsSecureWorksCtuDomainCoalBlacklist" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - SecureWorks - Abuse.ch Zeus Domain Tracker">
+    <classes>
+        <class name="tests.FeedsSecureWorksAbuseChZeusDomainTracker" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - SecureWorks - CTU Malicious Domain Watchlist">
+    <classes>
+        <class name="tests.FeedsSecureWorksCtuMaliciousDomainWatchlist" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - SecureWorks - CTU Suspected APT Domain Watchlist">
+    <classes>
+        <class name="tests.FeedsSecureWorksCtuSuspectedAptDomainWatchlist" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - SecureWorks - CTU APT Countermeasure Domain Watchlist">
+    <classes>
+        <class name="tests.FeedsSecureWorksCtuAptCountermeasureDomainWatchlist" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - SecureWorks - CTU TIPS Domain Indicators">
+    <classes>
+        <class name="tests.FeedsSecureWorksCtuTipsDomainIndicators" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - SecureWorks - PushDo Domain Generation Algorithm">
+    <classes>
+        <class name="tests.FeedsSecureWorksPushDoDomainGenerationAlgorithm" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - SecureWorks - Gameover ZeuS Domain Generation Algorithm">
+    <classes>
+        <class name="tests.FeedsSecureWorksGameoverZeuSDomainGenerationAlgorithm" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - SecureWorks - Dirt Jumper C2 Domain Watchlist">
+    <classes>
+        <class name="tests.FeedsSecureWorksDirtJumperC2DomainWatchlist" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - SecureWorks - Cryptolocker Domain Generation Algorithm">
+    <classes>
+        <class name="tests.FeedsSecureWorksCryptolockerDomainGenerationAlgorithm" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - SecureWorks - Ramnit Domain Generation Algorithm">
+    <classes>
+        <class name="tests.FeedsSecureWorksRamnitDomainGenerationAlgorithm" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - SecureWorks - CTU IP Coal Blacklist">
+    <classes>
+        <class name="tests.FeedsSecureWorksCtuIpCoalBlacklist" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - SecureWorks - Abuse.ch Zeus IP Tracker">
+    <classes>
+        <class name="tests.FeedsSecureWorksAbuseChZeusIpTracker" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - SecureWorks - CTU Malicious IP Watchlist">
+    <classes>
+        <class name="tests.FeedsSecureWorksCtuMaliciousIpWatchlist" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - SecureWorks - CTU Suspected APT IP Watchlist">
+    <classes>
+        <class name="tests.FeedsSecureWorksCtuSuspectedAptIpWatchlist" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - SecureWorks - CTU APT Countermeasure IP Watchlist">
+    <classes>
+        <class name="tests.FeedsSecureWorksCtuAptCountermeasureIpWatchlist" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - SecureWorks - CTU TIPS IP Watchlist">
+    <classes>
+        <class name="tests.FeedsSecureWorksCtuTipsIpWatchlist" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - SecureWorks - Dirt Jumper C2 IP Watchlist">
+    <classes>
+        <class name="tests.FeedsSecureWorksDirtJumperC2IpWatchlist" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - SecureWorks - Microsoft MARS B68 IP Watchlist">
+    <classes>
+        <class name="tests.FeedsSecureWorksMicrosoftMarsB68IpWatchlist" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - SecureWorks - Abuse.ch Feodo IP Tracker">
+    <classes>
+        <class name="tests.FeedsSecureWorksAbuseChFeodoIpTracker" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - Spamhaus DROP List">
+    <classes>
+        <class name="tests.FeedsSpamhausDropList" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - Spamhaus EDROP List">
+    <classes>
+        <class name="tests.FeedsSpamhausEdropList" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - torstatus.blutmagie.de All Tor Nodes">
+    <classes>
+        <class name="tests.FeedsTorstatusBlutmagieDeAllTorNodes" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - torstatus.blutmagie.de Exit Tor Nodes">
+    <classes>
+        <class name="tests.FeedsTorstatusBlutmagieDeExitTorNodes" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - Verisign iDefense">
+    <classes>
+        <class name="tests.FeedsVerisigniDefense" ></class>  
+    </classes>
+</test>
+
+<test name="Feeds - www.dan.me.uk Tor Node List">
+    <classes>
+        <class name="tests.FeedsWwwDanMeUkTorNodeList" ></class>  
+    </classes>
+</test>
+
+</suite>

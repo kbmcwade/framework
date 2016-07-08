@@ -1,0 +1,123 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ThreatQ Smoke Tests">
+
+<listeners>
+	<listener class-name="core.TestListeners"></listener>
+</listeners>
+
+<test name="API - Verify Permissions Routes">
+    <classes>
+        <class name="tests.ApiVerifyPermissionsRoutes" ></class>  
+    </classes>
+</test>
+
+<test name="API - Get Indicator Type Tools">
+    <classes>
+        <class name="tests.ApiGetIndicatorTypeTools" ></class>  
+    </classes>
+</test>
+
+<test name="API - Read-Only Cannot Create">
+    <classes>
+        <class name="tests.ApiReadOnlyCannotCreate" ></class>  
+    </classes>
+</test>
+
+<test name="API - Export Connectors Response Time">
+    <classes>
+        <class name="tests.ApiExportConnectorsResponseTime" ></class>  
+    </classes>
+</test>
+
+<test name="API - Exports Require Token">
+    <classes>
+        <class name="tests.ApiExportsRequireToken" ></class>  
+    </classes>
+</test>
+
+<test name="API - Export Override Parameters - Indicator Type">
+    <classes>
+        <class name="tests.ApiExportOverrideParametersIndicatorType" ></class>  
+    </classes>
+</test>
+
+<test name="API - Export Override Parameters - Indicator Status">
+    <classes>
+        <class name="tests.ApiExportOverrideParametersIndicatorStatus" ></class>  
+    </classes>
+</test>
+
+<test name="API - Export Override Parameters - Indicator Class">
+    <classes>
+        <class name="tests.ApiExportOverrideParametersIndicatorClass" ></class>  
+    </classes>
+</test>
+
+<test name="API - Export Override Parameters - Indicator Deleted">
+    <classes>
+        <class name="tests.ApiExportOverrideParametersIndicatorDeleted" ></class>  
+    </classes>
+</test>
+
+<test name="DB - Indicator Hash Type Length Compare">
+    <classes>
+        <class name="tests.ApiIndicatorHashTypeLengthCompare" ></class>  
+    </classes>
+</test>
+
+<test name="Api - Get Indicator Type Tools">
+    <classes>
+        <class name="tests.ApiGetIndicatorTypeTools" ></class>  
+    </classes>
+</test>
+
+<test name="Api - Get Adversaries">
+    <classes>
+        <class name="tests.ApiGetAdversaries" ></class>  
+    </classes>
+</test>
+
+<test name="Api - Post Adversaries">
+    <classes>
+        <class name="tests.ApiPostAdversaries" ></class>  
+    </classes>
+</test>
+
+<test name="Api - Get Attachments">
+    <classes>
+        <class name="tests.ApiGetAttachments" ></class>  
+    </classes>
+</test>
+
+<test name="Api - Get Attributes">
+    <classes>
+        <class name="tests.ApiGetAttributes" ></class>  
+    </classes>
+</test>
+
+<test name="Api - Get Events">
+    <classes>
+        <class name="tests.ApiGetEvents" ></class>  
+    </classes>
+</test>
+
+<test name="Api - Get Tags">
+    <classes>
+        <class name="tests.ApiGetTags" ></class>  
+    </classes>
+</test>
+
+
+<test name="Api - Consume Endpoint Comparison">
+    <classes>
+        <class name="tests.ApiConsumeEndpointComparison" ></class>  
+    </classes>
+</test>
+
+<test name="Api - Unique Indicator Values">
+    <classes>
+        <class name="tests.ApiUniqueIndicatorValues" ></class>  
+    </classes>
+</test>
+
+</suite>

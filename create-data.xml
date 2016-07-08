@@ -1,0 +1,44 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ThreatQ Create-Data Tests">
+
+<listeners>
+	<listener class-name="core.TestListeners"></listener>
+</listeners>
+
+<test name="LogIn">
+    <classes>
+        <class name="tests.LogIn" ></class>  
+    </classes>
+</test>
+
+<test name="Create New User">
+    <classes>
+        <class name="tests.CreateNewUser" ></class>  
+    </classes>
+</test>
+
+<test name="Create New Indicator Via Paste">
+    <classes>
+        <class name="tests.CreateNewIndicatorViaPaste" ></class>  
+    </classes>
+</test>
+
+<test name="Create New Event">
+    <classes>
+        <class name="tests.CreateNewEvent" ></class>  
+    </classes>
+</test>
+
+<test name="Create New Adversary">
+    <classes>
+        <class name="tests.CreateNewAdversary" ></class>  
+    </classes>
+</test>
+
+<test name="LogOut">
+    <classes>
+        <class name="tests.LogOut" ></class>  
+    </classes>
+</test>
+
+</suite>

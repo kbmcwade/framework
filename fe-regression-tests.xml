@@ -1,0 +1,92 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ThreatQ Smoke Tests">
+
+<listeners>
+	<listener class-name="core.TestListeners"></listener>
+</listeners>
+
+<test name="LogIn">
+    <classes>
+        <class name="tests.LogIn" ></class>  
+    </classes>
+</test>
+
+<test name="Oauth Session Expiration">
+    <classes>
+        <class name="tests.OauthSessionExpiration" ></class>  
+    </classes>
+</test>
+
+<test name="Oauth Session Expiration Tabs">
+    <classes>
+        <class name="tests.OauthSessionExpirationTabs" ></class>  
+    </classes>
+</test>
+
+<test name="Oauth Refresh Token">
+    <classes>
+        <class name="tests.OauthRefreshToken" ></class>  
+    </classes>
+</test>
+
+<test name="Oauth Refresh Token Tabs">
+    <classes>
+        <class name="tests.OauthRefreshTokenTabs" ></class>  
+    </classes>
+</test>
+
+<test name="Verify Indicator Pages">
+    <classes>
+        <class name="tests.VerifyIndicatorPages" ></class>  
+    </classes>
+</test>
+
+<test name="Create New User">
+    <classes>
+        <class name="tests.CreateNewUser" ></class>  
+    </classes>
+</test>
+
+<test name="Simple Search">
+    <classes>
+        <class name="tests.SimpleSearch" ></class>  
+    </classes>
+</test>
+
+<test name="Create New Indicator Via Paste">
+    <classes>
+        <class name="tests.CreateNewIndicatorViaPaste" ></class>  
+    </classes>
+</test>
+
+<test name="Create New Event">
+    <classes>
+        <class name="tests.CreateNewEvent" ></class>  
+    </classes>
+</test>
+
+<test name="Create New Adversary">
+    <classes>
+        <class name="tests.CreateNewAdversary" ></class>  
+    </classes>
+</test>
+
+<test name="Export Connectors">
+    <classes>
+        <class name="tests.ExportConnectors" ></class>  
+    </classes>
+</test>
+
+<test name="Get Exporter Urls">
+    <classes>
+        <class name="tests.GetExporterUrls" ></class>  
+    </classes>
+</test>
+
+<test name="LogOut">
+    <classes>
+        <class name="tests.LogOut" ></class>  
+    </classes>
+</test>
+
+</suite>

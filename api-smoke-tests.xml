@@ -1,0 +1,201 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ThreatQ v2.0.0 API Smoke Tests">
+
+<listeners>
+	<listener class-name="core.TestListeners"></listener>
+</listeners>
+
+<test name="Api - Get Adversaries">
+    <classes>
+        <class name="tests.ApiGetAdversaries" ></class>  
+    </classes>
+</test>
+
+<test name="Api - Get Attachments">
+    <classes>
+        <class name="tests.ApiGetAttachments" ></class>  
+    </classes>
+</test>
+
+<test name="Api - Get Attributes">
+    <classes>
+        <class name="tests.ApiGetAttributes" ></class>  
+    </classes>
+</test>
+
+<test name="Api - Get Attachments Types">
+    <classes>
+        <class name="tests.ApiGetAttachmentsTypes" ></class>  
+    </classes>
+</test>
+
+<test name="Api - Get Configuration">
+    <classes>
+        <class name="tests.ApiGetConfiguration" ></class>  
+    </classes>
+</test>
+
+<test name="Api - Get Configuration Proxy">
+    <classes>
+        <class name="tests.ApiGetConfigurationProxy" ></class>  
+    </classes>
+</test>
+
+<test name="Api - Get Configuration Whitelist">
+    <classes>
+        <class name="tests.ApiGetConfigurationWhitelist" ></class>  
+    </classes>
+</test>
+
+<test name="Api - Get Connectors">
+    <classes>
+        <class name="tests.ApiGetConnectors" ></class>  
+    </classes>
+</test>
+
+<test name="Api - Get Connectors Categories">
+    <classes>
+        <class name="tests.ApiGetConnectorsCategories" ></class>  
+    </classes>
+</test>
+
+<test name="Api - Get Events">
+    <classes>
+        <class name="tests.ApiGetEvents" ></class>  
+    </classes>
+</test>
+
+<test name="Api - Get Event Types">
+    <classes>
+        <class name="tests.ApiGetEventTypes" ></class>  
+    </classes>
+</test>
+
+<test name="Api - Get Exporters">
+    <classes>
+        <class name="tests.ApiGetExporters" ></class>  
+    </classes>
+</test>
+
+<test name="Api - Get Exporters Config">
+    <classes>
+        <class name="tests.ApiGetExportersConfig" ></class>  
+    </classes>
+</test>
+
+<test name="Api - Get Exporters Config Contenttypes">
+    <classes>
+        <class name="tests.ApiGetExportersConfigContenttypes" ></class>  
+    </classes>
+</test>
+
+<test name="Api - Get Exporters Datatypes">
+    <classes>
+        <class name="tests.ApiGetExportersDatatypes" ></class>  
+    </classes>
+</test>
+
+<test name="Api - Get Exporters Deliverytypes">
+    <classes>
+        <class name="tests.ApiGetExportersDeliverytypes" ></class>  
+    </classes>
+</test>
+
+<test name="Api - Get Files Content-types">
+    <classes>
+        <class name="tests.ApiGetFilesContenttypes" ></class>  
+    </classes>
+</test>
+
+<test name="Api - Get Gate Clients">
+    <classes>
+        <class name="tests.ApiGetGateClients" ></class>  
+    </classes>
+</test>
+
+<test name="Api - Get Groups">
+    <classes>
+        <class name="tests.ApiGetGroups" ></class>  
+    </classes>
+</test>
+
+<test name="Api - Get Indicators">
+    <classes>
+        <class name="tests.ApiGetIndicators" ></class>  
+    </classes>
+</test>
+
+<test name="Api - Get Indicator Statuses">
+    <classes>
+        <class name="tests.ApiGetIndicatorStatuses" ></class>  
+    </classes>
+</test>
+
+<test name="Api - Get Indicator Types">
+    <classes>
+        <class name="tests.ApiGetIndicatorTypes" ></class>  
+    </classes>
+</test>
+
+<test name="Api - Get Permissions Current">
+    <classes>
+        <class name="tests.ApiGetPermissionsCurrent" ></class>  
+    </classes>
+</test>
+
+<test name="Api - Get Recipients">
+    <classes>
+        <class name="tests.ApiGetRecipients" ></class>  
+    </classes>
+</test>
+
+<test name="Api - Get Signatures">
+    <classes>
+        <class name="tests.ApiGetSignatures" ></class>  
+    </classes>
+</test>
+
+<test name="Api - Get Sources">
+    <classes>
+        <class name="tests.ApiGetSources" ></class>  
+    </classes>
+</test>
+
+<test name="Api - Get Tags">
+    <classes>
+        <class name="tests.ApiGetTags" ></class>  
+    </classes>
+</test>
+
+<test name="Api - Get Tools">
+    <classes>
+        <class name="tests.ApiGetTools" ></class>  
+    </classes>
+</test>
+
+<test name="Api - Get Users">
+    <classes>
+        <class name="tests.ApiGetUsers" ></class>  
+    </classes>
+</test>
+
+<test name="Api - Get Users Current">
+    <classes>
+        <class name="tests.ApiGetUsersCurrent" ></class>  
+    </classes>
+</test>
+
+<test name="Api - Get Whitelist Rules">
+    <classes>
+        <class name="tests.ApiGetWhitelistRules" ></class>  
+    </classes>
+</test>
+
+<test name="Api - Unique Indicator Values">
+    <classes>
+        <class name="tests.ApiUniqueIndicatorValues" ></class>  
+    </classes>
+</test>
+
+</suite>
+
